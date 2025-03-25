@@ -1,13 +1,10 @@
 
-from typing import List
-
-from caldav import Literal
-
+from typing import List, Literal
 from pydantic import BaseModel, Field
 
 
 class Contact(BaseModel):
-    contact_type: str = Field(alias='type')  # noqa: F821
+    contact_type: Literal['email', 'phone_extension', 'phone', 'site', 'icq', 'twitter', 'skype', 'staff'] = Field(alias='type')
     value: str
     main: bool = False
     alias: bool = False
@@ -49,7 +46,6 @@ class User(ShortUser):
     aliases: List[str]
 
 
-
 class UsersPage(BaseModel):
     page: int
     pages: int
@@ -58,17 +54,15 @@ class UsersPage(BaseModel):
     users: List[User]
 
 
-
 class ShortGroup(BaseModel):
-
-    group_id: str
+    group_id: int = Field(alias="id")
     name: str
-    members_count: int
+    members_count: int= Field(alias="membersCount")
 
 
 class GroupMember(BaseModel):
-    member_id: str
-    type: Literal['user', 'group', 'department']  # noqa: F821
+    member_id: str = Field(alias="id")
+    type: Literal['user', 'group', 'department']
 
 
 class Group(ShortGroup):
@@ -77,20 +71,18 @@ class Group(ShortGroup):
         label: str
         email: str
         aliases: List[str]
-        external_id: str
+        external_id: str = Field(alias="externalId")
         removed: bool
         members: List[GroupMember]
-        admin_ids: List[str]
-        author_id: str
-        member_of: List[int]
-        created_at: str
+        member_of: List[int] = Field(alias="memberOf")
+        created_at: str= Field(alias="createdAt")
     
     
 class GroupsPage(BaseModel):
     groups: list[Group]
     page: int
     pages: int
-    per_page: int
+    per_page: int = Field(alias="perPage")
     total: int
 
 

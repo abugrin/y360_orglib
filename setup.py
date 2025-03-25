@@ -1,24 +1,29 @@
 from setuptools import setup, find_packages
 
+with open("readme.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
     name="y360-orglib",
-    version="0.0.1",
+    version="0.0.3",
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     author="Anton Bugrin",
     description="Unofficial Collection library for Y360 API",
-    long_description=open("readme.md").read(),
+    long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/yourproject",
+    url="https://github.com/abugrin/y360_orglib",
 
     classifiers=[
-        "Programming Language :: Python :: 3",
+        "Development Status :: 3 - Alpha",
+        "Programming Language :: Python :: 3.9",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.9",
     install_requires=[
-        # зависимости вашей библиотеки
-        "requests>=2.25.0",
+        "httpx>=0.28.1",
+        "pydantic>=2.10.6",
+        "python-dotenv>=1.0.1"
     ],
 )

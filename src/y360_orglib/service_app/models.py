@@ -2,10 +2,10 @@ from pydantic import BaseModel
 
 class ServiceAppTokenResponse(BaseModel):
     access_token: str
-    expires_in: int
-    issued_token_type: str
-    scope: str
-    token_type: str
+    expires_in: int = 3600
+    issued_token_type: str = ''
+    scope: str = ''
+    token_type: str = ''
     
    
     @property
