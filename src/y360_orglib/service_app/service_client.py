@@ -27,7 +27,7 @@ class ServiceAppClient:
         :raises: ServiceAppError
         """
         
-        logger = configure_logger(logger_name=__name__, console=True)
+        logger = configure_logger(logger_name=__name__, console=False)
         
         path, headers, data = self._get_headers(subject_token, subject_token_type)
 
@@ -55,4 +55,8 @@ class ServiceAppClient:
         }
 
         return path, headers, data
+    
+
+    def close(self):
+        self.session.close()
     

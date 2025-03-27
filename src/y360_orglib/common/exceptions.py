@@ -26,3 +26,6 @@ class DirectoryClientError(APIError):
     """Directory Application Client exception"""
     pass
 
+class DiskClientError(APIError):
+    """Disk Application Client exception"""
+    pass

@@ -16,7 +16,7 @@ def make_request(
     json: Optional[Dict[str, Any]] = None,
     max_retries: int = 3,
     retry_delay: float = 1.0
-) -> Dict[str, Any]:
+) -> Any:
     """
     Make HTTP request with retry logic and error handling.
     

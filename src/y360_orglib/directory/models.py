@@ -40,7 +40,7 @@ class User(ShortUser):
     language: str
     created_at: str = Field(alias="createdAt")
     updated_at: str = Field(alias="updatedAt")
-    display_name: str = Field(default=None, alias="displayName")
+    display_name: str = Field(default='', alias="displayName")
     groups: List[int]
     contacts: List[Contact]
     aliases: List[str]

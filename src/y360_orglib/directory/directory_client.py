@@ -1,4 +1,5 @@
 
+import logging
 from typing import List, Tuple
 import httpx
 from y360_orglib.directory.models import Contact, GroupMembers2, GroupsPage, User, UsersPage
@@ -12,7 +13,7 @@ class DirectoryClient():
     __url_v2 = 'https://api360.yandex.net/directory/v2/org/'
     __per_page = 100
     
-    def __init__(self, api_key: str, org_id: str, ssl_verify=True, log_level='INFO'):
+    def __init__(self, api_key: str, org_id: str, ssl_verify=True, log_level=logging.INFO):
         self._api_key = api_key
         self._org_id = org_id
         self.log = configure_logger(logger_name=__name__, level=log_level)
