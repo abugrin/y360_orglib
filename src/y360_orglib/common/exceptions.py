@@ -29,3 +29,7 @@ class DirectoryClientError(APIError):
 class DiskClientError(APIError):
     """Disk Application Client exception"""
     pass
+
+class MailAuditError(APIError):
+    """Mail Audit Log exception"""
+    pass
