@@ -44,6 +44,15 @@ class DirectoryClient():
         
     
     def get_users_page(self, page) -> UsersPage:
+        """Get a Users page
+
+        Args:
+            page (int): Page number
+
+        Returns:
+            UsersPage: UsersPage object
+        """
+
         path = f'{self.__url}{self._org_id}/users?page={page}&perPage={self.__per_page}'
 
         try:

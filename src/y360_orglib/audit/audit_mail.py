@@ -24,6 +24,17 @@ class AuditMail():
 
         
     def get_logs_page(self, page: int, per_page: int = 10, page_token: str = '') -> MailEventsPage:
+        """
+        Get a page of mail audit log events.
+
+        Args:
+            page (int): The page number.
+            per_page (int, optional): The number of events per page. Defaults to 10.
+            page_token (str, optional): The page token. Defaults to ''.
+
+        Returns:
+            MailEventsPage: The page of MailEvent events.
+        """
         
 
         if len(page_token) == 0:
