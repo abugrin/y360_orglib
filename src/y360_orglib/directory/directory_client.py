@@ -2,7 +2,7 @@
 import logging
 from typing import List, Tuple
 import httpx
-from y360_orglib.directory.models import Contact, GroupMembers2, GroupsPage, User, UsersPage
+from y360_orglib.directory.models import Contact, GroupMembers2, GroupsPage, User, User2fa, UsersPage
 from y360_orglib.common.exceptions import APIError, DirectoryClientError
 from y360_orglib.common.http import make_request
 from y360_orglib.logging.config import configure_logger
@@ -25,6 +25,9 @@ class DirectoryClient():
         self.session.headers.update(self._headers)
 
     
+    def close(self):
+        self.session.close()
+
     def count_pages(self)-> Tuple[int, int]:
         """Get number of pages in users list response
             Returns:
@@ -171,3 +174,24 @@ class DirectoryClient():
         except APIError as e:
             self.log.error(f"Error getting group members: {e}")
             raise DirectoryClientError(e)
+        
+    def get_user_2fa(self, user_id: str) -> User2fa:
+        """Get 2fa status of a user. Use API v2 method: https://yandex.ru/dev/api360/doc/ru/ref/UserService/UserService_Get2fa
+
+        Args:
+            user_id (str): User ID
+
+        Returns:
+            User2fa: Object with 2fa status
+        """
+        
+        path = f'{self.__url}{self._org_id}/users/{user_id}/2fa'
+
+        try:
+            response_json = make_request(session=self.session, url=path, method='GET')
+            return User2fa(**response_json)
+        except APIError as e:
+            self.log.error(f"Error getting user 2fa: {e}")
+            raise DirectoryClientError(e)
+           
+

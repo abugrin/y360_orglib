@@ -90,4 +90,8 @@ class GroupMembers2(BaseModel):
     groups: List[ShortGroup]
     users: List[ShortUser]
 
+class User2fa(BaseModel):
+    user_id: str = Field(alias="userId")
+    has2fa: bool
+    has_security_phone: bool = Field(alias="hasSecurityPhone")
 
