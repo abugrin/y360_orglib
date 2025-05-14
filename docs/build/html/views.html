@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Views &#8212; Y360 Library 0.0.6 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=1fd71caa"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Y360 Library documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-y360_orglib">
+<span id="views"></span><h1>Views<a class="headerlink" href="#module-y360_orglib" title="Link to this heading">¶</a></h1>
+<p>Y360 Org Library - Library for interacting with Y360 APIs.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="y360_orglib.AuditMail">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">y360_orglib.</span></span><span class="sig-name descname"><span class="pre">AuditMail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">org_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssl_verify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#y360_orglib.AuditMail" title="Link to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.AuditMail.get_logs_page">
+<span class="sig-name descname"><span class="pre">get_logs_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">per_page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MailEventsPage</span></span></span><a class="headerlink" href="#y360_orglib.AuditMail.get_logs_page" title="Link to this definition">¶</a></dt>
+<dd><p>Get a page of mail audit log events.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>page (int): The page number.
+per_page (int, optional): The number of events per page. Defaults to 10.
+page_token (str, optional): The page token. Defaults to ‘’.</p>
+</dd>
+<dt>Returns:</dt><dd><p>MailEventsPage: The page of MailEvent events.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="y360_orglib.DirectoryClient">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">y360_orglib.</span></span><span class="sig-name descname"><span class="pre">DirectoryClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">org_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssl_verify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#y360_orglib.DirectoryClient" title="Link to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.DirectoryClient.add_user_contacts">
+<span class="sig-name descname"><span class="pre">add_user_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contacts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Contact</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#y360_orglib.DirectoryClient.add_user_contacts" title="Link to this definition">¶</a></dt>
+<dd><p>Add contacts to a user.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>user (User): User object
+contacts (List[Contact]): List of contacts
+replace (bool, optional): Replace existing contacts. Defaults to False.</p>
+</dd>
+<dt>Returns:</dt><dd><p>dict: Response json</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.DirectoryClient.add_user_to_group">
+<span class="sig-name descname"><span class="pre">add_user_to_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#y360_orglib.DirectoryClient.add_user_to_group" title="Link to this definition">¶</a></dt>
+<dd><p>Add user to group. Use API v1 method: dev/api360/doc/ru/ref/GroupService/GroupService_AddMember</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>user_id (str): User ID
+group_id (int): Group ID</p>
+</dd>
+<dt>Returns:</dt><dd><p>dict: Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.DirectoryClient.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#y360_orglib.DirectoryClient.close" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.DirectoryClient.count_pages">
+<span class="sig-name descname"><span class="pre">count_pages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#y360_orglib.DirectoryClient.count_pages" title="Link to this definition">¶</a></dt>
+<dd><p>Get number of pages in users list response
+Returns:</p>
+<blockquote>
+<div><p>Tuple[int, int]: (users_count, pages_count)</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.DirectoryClient.get_all_users">
+<span class="sig-name descname"><span class="pre">get_all_users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">User</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#y360_orglib.DirectoryClient.get_all_users" title="Link to this definition">¶</a></dt>
+<dd><p>Get all users of an organization.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list[User]: List of users</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.DirectoryClient.get_group_members_v2">
+<span class="sig-name descname"><span class="pre">get_group_members_v2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group_id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">GroupMembers2</span></span></span><a class="headerlink" href="#y360_orglib.DirectoryClient.get_group_members_v2" title="Link to this definition">¶</a></dt>
+<dd><p>Get members of a group. Use API v2 method: <a class="reference external" href="https://yandex.ru/dev/api360/doc/ru/ref/GroupV2Service/GroupService_ListMembers">https://yandex.ru/dev/api360/doc/ru/ref/GroupV2Service/GroupService_ListMembers</a></p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>group_id (number): Group ID number. Use get_groups(page, per_page) to get IDs</p>
+</dd>
+<dt>Returns:</dt><dd><p>GroupMembers2: Object with lists of group members</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.DirectoryClient.get_groups_page">
+<span class="sig-name descname"><span class="pre">get_groups_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">per_page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">GroupsPage</span></span></span><a class="headerlink" href="#y360_orglib.DirectoryClient.get_groups_page" title="Link to this definition">¶</a></dt>
+<dd><p>Get groups of an organization. Use API v1 method: <a class="reference external" href="https://yandex.ru/dev/api360/doc/ru/ref/GroupService/GroupService_List">https://yandex.ru/dev/api360/doc/ru/ref/GroupService/GroupService_List</a></p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>page (int, optional): Page number. Defaults to 1.
+per_page (int, optional): Number of groups per page. Defaults to 10.</p>
+</dd>
+<dt>Returns:</dt><dd><p>GroupsPage: List of groups</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.DirectoryClient.get_user_2fa">
+<span class="sig-name descname"><span class="pre">get_user_2fa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">User2fa</span></span></span><a class="headerlink" href="#y360_orglib.DirectoryClient.get_user_2fa" title="Link to this definition">¶</a></dt>
+<dd><p>Get 2fa status of a user. Use API v2 method: <a class="reference external" href="https://yandex.ru/dev/api360/doc/ru/ref/UserService/UserService_Get2fa">https://yandex.ru/dev/api360/doc/ru/ref/UserService/UserService_Get2fa</a></p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>user_id (str): User ID</p>
+</dd>
+<dt>Returns:</dt><dd><p>User2fa: Object with 2fa status</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.DirectoryClient.get_users_page">
+<span class="sig-name descname"><span class="pre">get_users_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">UsersPage</span></span></span><a class="headerlink" href="#y360_orglib.DirectoryClient.get_users_page" title="Link to this definition">¶</a></dt>
+<dd><p>Get a Users page</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>page (int): Page number</p>
+</dd>
+<dt>Returns:</dt><dd><p>UsersPage: UsersPage object</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="y360_orglib.DirectoryClientError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">y360_orglib.</span></span><span class="sig-name descname"><span class="pre">DirectoryClientError</span></span><a class="headerlink" href="#y360_orglib.DirectoryClientError" title="Link to this definition">¶</a></dt>
+<dd><p>Directory Application Client exception</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="y360_orglib.DiskClient">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">y360_orglib.</span></span><span class="sig-name descname"><span class="pre">DiskClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssl_verify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#y360_orglib.DiskClient" title="Link to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.DiskClient.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#y360_orglib.DiskClient.close" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.DiskClient.get_public_resources">
+<span class="sig-name descname"><span class="pre">get_public_resources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Resource</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#y360_orglib.DiskClient.get_public_resources" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.DiskClient.get_public_settings">
+<span class="sig-name descname"><span class="pre">get_public_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PublicSettings</span></span></span><a class="headerlink" href="#y360_orglib.DiskClient.get_public_settings" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="y360_orglib.DiskClientError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">y360_orglib.</span></span><span class="sig-name descname"><span class="pre">DiskClientError</span></span><a class="headerlink" href="#y360_orglib.DiskClientError" title="Link to this definition">¶</a></dt>
+<dd><p>Disk Application Client exception</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="y360_orglib.MailAuditError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">y360_orglib.</span></span><span class="sig-name descname"><span class="pre">MailAuditError</span></span><a class="headerlink" href="#y360_orglib.MailAuditError" title="Link to this definition">¶</a></dt>
+<dd><p>Mail Audit Log exception</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="y360_orglib.ServiceAppClient">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">y360_orglib.</span></span><span class="sig-name descname"><span class="pre">ServiceAppClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_secret</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssl_verify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#y360_orglib.ServiceAppClient" title="Link to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.ServiceAppClient.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#y360_orglib.ServiceAppClient.close" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="y360_orglib.ServiceAppClient.get_service_app_token">
+<span class="sig-name descname"><span class="pre">get_service_app_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subject_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject_token_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'urn:yandex:params:oauth:token-type:email'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ServiceAppTokenResponse</span></span></span><a class="headerlink" href="#y360_orglib.ServiceAppClient.get_service_app_token" title="Link to this definition">¶</a></dt>
+<dd><p>Get a service app token for for given User (subject_token).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>subject_token</strong> – User Id or Email</p></li>
+<li><p><strong>subject_token_type</strong> – <p>The type of the subject token.</p>
+<p>If the subject_token is a User ID, the subject_token_type should be ‘<a class="reference external" href="urn:yandex:params:oauth:token-type:uid">urn:yandex:params:oauth:token-type:uid</a>’.</p>
+<p>If the subject_token is an Email, the subject_token_type should be ‘<a class="reference external" href="urn:yandex:params:oauth:token-type:email">urn:yandex:params:oauth:token-type:email</a>’.</p>
+<p>Default value is ‘<a class="reference external" href="urn:yandex:params:oauth:token-type:email">urn:yandex:params:oauth:token-type:email</a>’.</p>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response with service app token for provided User</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ServiceAppTokenResponse</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p>ServiceAppError</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="y360_orglib.ServiceAppError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">y360_orglib.</span></span><span class="sig-name descname"><span class="pre">ServiceAppError</span></span><a class="headerlink" href="#y360_orglib.ServiceAppError" title="Link to this definition">¶</a></dt>
+<dd><p>Service Application Client exception</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="y360_orglib.configure_logger">
+<span class="sig-prename descclassname"><span class="pre">y360_orglib.</span></span><span class="sig-name descname"><span class="pre">configure_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">console</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_file_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10485760</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backup_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propagate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#y360_orglib.configure_logger" title="Link to this definition">¶</a></dt>
+<dd><p>Настраивает логгер с указанными параметрами.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>level: Уровень логирования (по умолчанию INFO)
+console: Логировать в консоль (True или False)
+log_file: Путь к файлу лога (или None, если не нужно логировать в файл)
+log_format: Формат лога (или None для использования стандартного формата)
+max_file_size: Максимальный размер файла лога перед ротацией
+backup_count: Количество файлов резервных копий
+propagate: Передавать ли сообщения родительским логгерам
+module_name: Имя модуля для создания дочернего логгера (или None для основного логгера)</p>
+</dd>
+<dt>Returns:</dt><dd><p>Настроенный логгер</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Y360 Library</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents: Y360 Library</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Views</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#y360_orglib.AuditMail"><code class="docutils literal notranslate"><span class="pre">AuditMail</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#y360_orglib.DirectoryClient"><code class="docutils literal notranslate"><span class="pre">DirectoryClient</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#y360_orglib.DirectoryClientError"><code class="docutils literal notranslate"><span class="pre">DirectoryClientError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#y360_orglib.DiskClient"><code class="docutils literal notranslate"><span class="pre">DiskClient</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#y360_orglib.DiskClientError"><code class="docutils literal notranslate"><span class="pre">DiskClientError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#y360_orglib.MailAuditError"><code class="docutils literal notranslate"><span class="pre">MailAuditError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#y360_orglib.ServiceAppClient"><code class="docutils literal notranslate"><span class="pre">ServiceAppClient</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#y360_orglib.ServiceAppError"><code class="docutils literal notranslate"><span class="pre">ServiceAppError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#y360_orglib.configure_logger"><code class="docutils literal notranslate"><span class="pre">configure_logger()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Y360 Library documentation</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Anton Bugrin.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/views.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
