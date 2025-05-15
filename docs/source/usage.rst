@@ -2,7 +2,7 @@ Usage
 =====
 
 Installation
------------
+------------
 
 To install the package:
 
