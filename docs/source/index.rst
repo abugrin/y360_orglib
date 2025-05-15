@@ -6,10 +6,16 @@
 Y360 Library documentation
 ==========================
 
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents: Y360 Library
 
-   views
+   usage
+   api
 
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

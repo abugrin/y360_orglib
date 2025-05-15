@@ -2,10 +2,10 @@ Package y360\_orglib
 =====
 
 
-Audit y360\_orglib.audit
+Mail Audit y360\_orglib.audit
 ---------------
 
-.. automodule:: y360_orglib.audit
+.. automodule:: y360_orglib.audit.audit_mail
    :members:
    :undoc-members:
    :show-inheritance:
@@ -13,7 +13,7 @@ Audit y360\_orglib.audit
 Directory y360\_orglib.directory
 ---------------
 
-.. automodule:: y360_orglib.directory
+.. automodule:: y360_orglib.directory.directory_client
    :members:
    :undoc-members:
    :show-inheritance:
@@ -21,7 +21,7 @@ Directory y360\_orglib.directory
 Disk y360\_orglib.disk
 ---------------
 
-.. automodule:: y360_orglib.disk
+.. automodule:: y360_orglib.disk.disk_client
    :members:
    :undoc-members:
    :show-inheritance:
@@ -29,7 +29,7 @@ Disk y360\_orglib.disk
 Service Apps y360\_orglib.service\_app
 ---------------
 
-.. automodule:: y360_orglib.service_app
+.. automodule:: y360_orglib.service_app.service_client
    :members:
    :undoc-members:
    :show-inheritance:
