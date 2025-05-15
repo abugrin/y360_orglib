@@ -9,10 +9,19 @@ from y360_orglib.disk.models import PublicResourcesList, PublicSettings, Resourc
 from y360_orglib.logging.config import configure_logger
 
 
-
-
 class DiskClient():
+    """
+    Yandex Disk client
+    """
     def __init__(self, token: str, ssl_verify=True, log_level=logging.INFO):
+        """
+        Initialize Yandex Disk client
+        Args:
+            token: Yandex Disk User's token
+            ssl_verify: Verify SSL certificate
+            log_level: Log level
+        """
+
         self._token = token
         self.log = configure_logger(logger_name=__name__, level=log_level, console=False)
         self._headers = {'Authorization': 'OAuth ' + token}
@@ -21,6 +30,18 @@ class DiskClient():
 
 
     def get_public_resources(self, limit: int = 100, offset: int = 0) -> List[Resource]:
+        """
+        Get list of public resources from Yandex Disk
+
+        Args:
+            limit: Number of resources to return
+            offset: Offset of the first resource to return
+        Returns:
+            List[Resource]: List of public resources
+        Raises:
+            DiskClientError: If failed to get public resources
+        """
+
         url = '/v1/disk/resources/public'
         params = {
             'limit': limit,
@@ -52,6 +73,16 @@ class DiskClient():
         
     
     def get_public_settings(self, path: str) -> PublicSettings:
+        """
+        Get public settings for resource for provided path
+            Args:
+                path: Path to resource
+            Returns:
+                PublicSettings: Public settings for resource
+            Raises:
+                DiskClientError: If failed to get public settings
+        """
+
         url = '/v1/disk/public/resources/public-settings'
         params = {'path': path, 'allow_address_access': True}
         #start_time = time()
@@ -66,4 +97,8 @@ class DiskClient():
     
 
     def close(self):
+        """
+        Close Disk client session
+        """
+
         self.session.close()

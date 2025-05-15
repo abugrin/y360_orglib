@@ -30,7 +30,7 @@ class DirectoryClient():
 
     def count_pages(self)-> Tuple[int, int]:
         """Get number of pages in users list response
-        
+
         Returns:
             Tuple[int, int]: (users_count, pages_count)
         """
@@ -48,13 +48,15 @@ class DirectoryClient():
         
     
     def get_users_page(self, page) -> UsersPage:
-        """Get a Users page
+        """Get a Users page with list of users (default 100 per page)
 
         Args:
             page (int): Page number
-
         Returns:
-            UsersPage: UsersPage object
+            UsersPage: Users page object
+        Raises:
+            DirectoryClientError: If error occurs
+
         """
 
         path = f'{self.__url}{self._org_id}/users?page={page}&perPage={self.__per_page}'
@@ -68,10 +70,12 @@ class DirectoryClient():
         
     
     def get_all_users(self) -> List[User]:
-        """Get all users of an organization.
+        """
+        Get all users of an organization.
 
         Returns:
-            list[User]: List of users
+            List[User]: List of User objects
+       
         """
         
         users = []
@@ -92,7 +96,7 @@ class DirectoryClient():
             replace (bool, optional): Replace existing contacts. Defaults to False.
         
         Returns:
-            dict: Response json
+            dict: Response with operation result json
         """
 
         path = f'{self.__url}{self._org_id}/users/{user.uid}/contacts'
