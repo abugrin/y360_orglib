@@ -45,7 +45,7 @@ class ShortUser(BaseModel):
 
     class Name(BaseModel):
         """User Name model
-        
+
         Attributes:
             first (str): User first name
             last (str): User last name
@@ -104,7 +104,7 @@ class UsersPage(BaseModel):
         page (int): Current page
         pages (int): Total pages
         per_page (int): Users per page
-        total (int): Total users in org
+        total (int): Total users in organization
         users (List[User]): List of users
     """
     page: int

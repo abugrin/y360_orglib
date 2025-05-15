@@ -42,7 +42,7 @@
               <p class="caption" role="heading"><span class="caption-text">Contents: Y360 Library</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">Package y360_orglib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Y360 Orglib</a></li>
 </ul>
 
         </div>
@@ -79,11 +79,11 @@
  | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
- | <a href="#H"><strong>H</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
@@ -96,27 +96,33 @@
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.User.about">about (y360_orglib.directory.models.User attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.User.about">about (y360_orglib.directory.User attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.service_app.models.ServiceAppTokenResponse.access_token">access_token (y360_orglib.service_app.models.ServiceAppTokenResponse attribute)</a>
+      <li><a href="api.html#y360_orglib.service_app.ServiceAppTokenResponse.access_token">access_token (y360_orglib.service_app.ServiceAppTokenResponse attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.directory_client.DirectoryClient.add_user_contacts">add_user_contacts() (y360_orglib.directory.directory_client.DirectoryClient method)</a>
+      <li><a href="api.html#y360_orglib.disk.BaseAccess.access_type">access_type (y360_orglib.disk.BaseAccess attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.directory_client.DirectoryClient.add_user_to_group">add_user_to_group() (y360_orglib.directory.directory_client.DirectoryClient method)</a>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.actor_uid">actor_uid (y360_orglib.audit.MailEvent attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.DirectoryClient.add_user_contacts">add_user_contacts() (y360_orglib.directory.DirectoryClient method)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.DirectoryClient.add_user_to_group">add_user_to_group() (y360_orglib.directory.DirectoryClient method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.Contact.alias">alias (y360_orglib.directory.models.Contact attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.Contact.alias">alias (y360_orglib.directory.Contact attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.Group.aliases">aliases (y360_orglib.directory.models.Group attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.Group.aliases">aliases (y360_orglib.directory.Group attribute)</a>
 
       <ul>
-        <li><a href="api.html#y360_orglib.directory.models.User.aliases">(y360_orglib.directory.models.User attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.User.aliases">(y360_orglib.directory.User attribute)</a>
 </li>
       </ul></li>
-      <li><a href="api.html#y360_orglib.audit.audit_mail.AuditMail">AuditMail (class in y360_orglib.audit.audit_mail)</a>
+      <li><a href="api.html#y360_orglib.audit.AuditMail">AuditMail (class in y360_orglib.audit)</a>
 </li>
-      <li><a href="api.html#y360_orglib.service_app.models.ServiceAppTokenResponse.auth_header">auth_header (y360_orglib.service_app.models.ServiceAppTokenResponse property)</a>
+      <li><a href="api.html#y360_orglib.service_app.ServiceAppTokenResponse.auth_header">auth_header (y360_orglib.service_app.ServiceAppTokenResponse property)</a>
+</li>
+      <li><a href="api.html#y360_orglib.disk.PublicSettings.available_until">available_until (y360_orglib.disk.PublicSettings attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -124,7 +130,13 @@
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.User.birthday">birthday (y360_orglib.directory.models.User attribute)</a>
+      <li><a href="api.html#y360_orglib.disk.BaseAccess">BaseAccess (class in y360_orglib.disk)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.bcc">bcc (y360_orglib.audit.MailEvent attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.User.birthday">birthday (y360_orglib.directory.User attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -132,28 +144,34 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.directory_client.DirectoryClient.close">close() (y360_orglib.directory.directory_client.DirectoryClient method)</a>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.cc">cc (y360_orglib.audit.MailEvent attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.client_ip">client_ip (y360_orglib.audit.MailEvent attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.DirectoryClient.close">close() (y360_orglib.directory.DirectoryClient method)</a>
 
       <ul>
-        <li><a href="api.html#y360_orglib.disk.disk_client.DiskClient.close">(y360_orglib.disk.disk_client.DiskClient method)</a>
+        <li><a href="api.html#y360_orglib.disk.DiskClient.close">(y360_orglib.disk.DiskClient method)</a>
 </li>
-        <li><a href="api.html#y360_orglib.service_app.service_client.ServiceAppClient.close">(y360_orglib.service_app.service_client.ServiceAppClient method)</a>
+        <li><a href="api.html#y360_orglib.service_app.ServiceAppClient.close">(y360_orglib.service_app.ServiceAppClient method)</a>
 </li>
       </ul></li>
-      <li><a href="api.html#y360_orglib.directory.models.Contact">Contact (class in y360_orglib.directory.models)</a>
+      <li><a href="api.html#y360_orglib.directory.Contact">Contact (class in y360_orglib.directory)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.Contact.contact_type">contact_type (y360_orglib.directory.models.Contact attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.Contact.contact_type">contact_type (y360_orglib.directory.Contact attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.User.contacts">contacts (y360_orglib.directory.models.User attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.User.contacts">contacts (y360_orglib.directory.User attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.directory_client.DirectoryClient.count_pages">count_pages() (y360_orglib.directory.directory_client.DirectoryClient method)</a>
+      <li><a href="api.html#y360_orglib.directory.DirectoryClient.count_pages">count_pages() (y360_orglib.directory.DirectoryClient method)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.Group.created_at">created_at (y360_orglib.directory.models.Group attribute)</a>
+      <li><a href="api.html#y360_orglib.disk.Resource.created">created (y360_orglib.disk.Resource attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.Group.created_at">created_at (y360_orglib.directory.Group attribute)</a>
 
       <ul>
-        <li><a href="api.html#y360_orglib.directory.models.User.created_at">(y360_orglib.directory.models.User attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.User.created_at">(y360_orglib.directory.User attribute)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -162,17 +180,21 @@
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.ShortUser.department_id">department_id (y360_orglib.directory.models.ShortUser attribute)</a>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.date">date (y360_orglib.audit.MailEvent attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.Group.description">description (y360_orglib.directory.models.Group attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.ShortUser.department_id">department_id (y360_orglib.directory.ShortUser attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.Group.description">description (y360_orglib.directory.Group attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.directory_client.DirectoryClient">DirectoryClient (class in y360_orglib.directory.directory_client)</a>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.dest_mid">dest_mid (y360_orglib.audit.MailEvent attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.disk.disk_client.DiskClient">DiskClient (class in y360_orglib.disk.disk_client)</a>
+      <li><a href="api.html#y360_orglib.directory.DirectoryClient">DirectoryClient (class in y360_orglib.directory)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.User.display_name">display_name (y360_orglib.directory.models.User attribute)</a>
+      <li><a href="api.html#y360_orglib.disk.DiskClient">DiskClient (class in y360_orglib.disk)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.User.display_name">display_name (y360_orglib.directory.User attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -180,20 +202,24 @@
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.Group.email">email (y360_orglib.directory.models.Group attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.Group.email">email (y360_orglib.directory.Group attribute)</a>
 
       <ul>
-        <li><a href="api.html#y360_orglib.directory.models.ShortUser.email">(y360_orglib.directory.models.ShortUser attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.ShortUser.email">(y360_orglib.directory.ShortUser attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.event_type">event_type (y360_orglib.audit.MailEvent attribute)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.service_app.models.ServiceAppTokenResponse.expires_in">expires_in (y360_orglib.service_app.models.ServiceAppTokenResponse attribute)</a>
+      <li><a href="api.html#y360_orglib.audit.MailEventsPage.events">events (y360_orglib.audit.MailEventsPage attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.Group.external_id">external_id (y360_orglib.directory.models.Group attribute)</a>
+      <li><a href="api.html#y360_orglib.service_app.ServiceAppTokenResponse.expires_in">expires_in (y360_orglib.service_app.ServiceAppTokenResponse attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.Group.external_id">external_id (y360_orglib.directory.Group attribute)</a>
 
       <ul>
-        <li><a href="api.html#y360_orglib.directory.models.User.external_id">(y360_orglib.directory.models.User attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.User.external_id">(y360_orglib.directory.User attribute)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -202,7 +228,15 @@
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.ShortUser.Name.first">first (y360_orglib.directory.models.ShortUser.Name attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.ShortUser.Name.first">first (y360_orglib.directory.ShortUser.Name attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.folder_name">folder_name (y360_orglib.audit.MailEvent attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.folder_type">folder_type (y360_orglib.audit.MailEvent attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.from_s">from_s (y360_orglib.audit.MailEvent attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -210,57 +244,45 @@
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.ShortUser.gender">gender (y360_orglib.directory.models.ShortUser attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.ShortUser.gender">gender (y360_orglib.directory.ShortUser attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.directory_client.DirectoryClient.get_all_users">get_all_users() (y360_orglib.directory.directory_client.DirectoryClient method)</a>
+      <li><a href="api.html#y360_orglib.directory.DirectoryClient.get_all_users">get_all_users() (y360_orglib.directory.DirectoryClient method)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.directory_client.DirectoryClient.get_group_members_v2">get_group_members_v2() (y360_orglib.directory.directory_client.DirectoryClient method)</a>
+      <li><a href="api.html#y360_orglib.directory.DirectoryClient.get_group_members_v2">get_group_members_v2() (y360_orglib.directory.DirectoryClient method)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.directory_client.DirectoryClient.get_groups_page">get_groups_page() (y360_orglib.directory.directory_client.DirectoryClient method)</a>
+      <li><a href="api.html#y360_orglib.directory.DirectoryClient.get_groups_page">get_groups_page() (y360_orglib.directory.DirectoryClient method)</a>
 </li>
-      <li><a href="api.html#y360_orglib.audit.audit_mail.AuditMail.get_logs_page">get_logs_page() (y360_orglib.audit.audit_mail.AuditMail method)</a>
+      <li><a href="api.html#y360_orglib.audit.AuditMail.get_logs_page">get_logs_page() (y360_orglib.audit.AuditMail method)</a>
 </li>
-      <li><a href="api.html#y360_orglib.disk.disk_client.DiskClient.get_public_resources">get_public_resources() (y360_orglib.disk.disk_client.DiskClient method)</a>
+      <li><a href="api.html#y360_orglib.disk.DiskClient.get_public_resources">get_public_resources() (y360_orglib.disk.DiskClient method)</a>
 </li>
-      <li><a href="api.html#y360_orglib.disk.disk_client.DiskClient.get_public_settings">get_public_settings() (y360_orglib.disk.disk_client.DiskClient method)</a>
+      <li><a href="api.html#y360_orglib.disk.DiskClient.get_public_settings">get_public_settings() (y360_orglib.disk.DiskClient method)</a>
 </li>
-      <li><a href="api.html#y360_orglib.service_app.service_client.ServiceAppClient.get_service_app_token">get_service_app_token() (y360_orglib.service_app.service_client.ServiceAppClient method)</a>
+      <li><a href="api.html#y360_orglib.service_app.ServiceAppClient.get_service_app_token">get_service_app_token() (y360_orglib.service_app.ServiceAppClient method)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.directory_client.DirectoryClient.get_user_2fa">get_user_2fa() (y360_orglib.directory.directory_client.DirectoryClient method)</a>
+      <li><a href="api.html#y360_orglib.directory.DirectoryClient.get_user_2fa">get_user_2fa() (y360_orglib.directory.DirectoryClient method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.directory_client.DirectoryClient.get_users_page">get_users_page() (y360_orglib.directory.directory_client.DirectoryClient method)</a>
+      <li><a href="api.html#y360_orglib.directory.DirectoryClient.get_users_page">get_users_page() (y360_orglib.directory.DirectoryClient method)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.Group">Group (class in y360_orglib.directory.models)</a>
+      <li><a href="api.html#y360_orglib.directory.Group">Group (class in y360_orglib.directory)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.ShortGroup.group_id">group_id (y360_orglib.directory.models.ShortGroup attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.ShortGroup.group_id">group_id (y360_orglib.directory.ShortGroup attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.GroupMember">GroupMember (class in y360_orglib.directory.models)</a>
+      <li><a href="api.html#y360_orglib.directory.GroupMember">GroupMember (class in y360_orglib.directory)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.GroupMembers2">GroupMembers2 (class in y360_orglib.directory.models)</a>
+      <li><a href="api.html#y360_orglib.directory.GroupMembers2">GroupMembers2 (class in y360_orglib.directory)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.GroupMembers2.groups">groups (y360_orglib.directory.models.GroupMembers2 attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.GroupMembers2.groups">groups (y360_orglib.directory.GroupMembers2 attribute)</a>
 
       <ul>
-        <li><a href="api.html#y360_orglib.directory.models.GroupsPage.groups">(y360_orglib.directory.models.GroupsPage attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.GroupsPage.groups">(y360_orglib.directory.GroupsPage attribute)</a>
 </li>
-        <li><a href="api.html#y360_orglib.directory.models.User.groups">(y360_orglib.directory.models.User attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.User.groups">(y360_orglib.directory.User attribute)</a>
 </li>
       </ul></li>
-      <li><a href="api.html#y360_orglib.directory.models.GroupsPage">GroupsPage (class in y360_orglib.directory.models)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="H">H</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.User2fa.has2fa">has2fa (y360_orglib.directory.models.User2fa attribute)</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.User2fa.has_security_phone">has_security_phone (y360_orglib.directory.models.User2fa attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.GroupsPage">GroupsPage (class in y360_orglib.directory)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -268,17 +290,19 @@
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.User.is_admin">is_admin (y360_orglib.directory.models.User attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.User.is_admin">is_admin (y360_orglib.directory.User attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.User.is_dismissed">is_dismissed (y360_orglib.directory.models.User attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.User.is_dismissed">is_dismissed (y360_orglib.directory.User attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.User.is_enabled">is_enabled (y360_orglib.directory.User attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.User.is_enabled">is_enabled (y360_orglib.directory.models.User attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.User.is_robot">is_robot (y360_orglib.directory.User attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.User.is_robot">is_robot (y360_orglib.directory.models.User attribute)</a>
+      <li><a href="api.html#y360_orglib.service_app.ServiceAppTokenResponse.issued_token_type">issued_token_type (y360_orglib.service_app.ServiceAppTokenResponse attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.service_app.models.ServiceAppTokenResponse.issued_token_type">issued_token_type (y360_orglib.service_app.models.ServiceAppTokenResponse attribute)</a>
+      <li><a href="api.html#y360_orglib.disk.PublicResourcesList.items">items (y360_orglib.disk.PublicResourcesList attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -286,13 +310,17 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.Group.label">label (y360_orglib.directory.models.Group attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.Group.label">label (y360_orglib.directory.Group attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.labels">labels (y360_orglib.audit.MailEvent attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.User.language">language (y360_orglib.directory.models.User attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.User.language">language (y360_orglib.directory.User attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.ShortUser.Name.last">last (y360_orglib.directory.models.ShortUser.Name attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.ShortUser.Name.last">last (y360_orglib.directory.ShortUser.Name attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.disk.PublicResourcesList.limit">limit (y360_orglib.disk.PublicResourcesList attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -300,74 +328,118 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.Contact.main">main (y360_orglib.directory.models.Contact attribute)</a>
+      <li><a href="api.html#y360_orglib.disk.MacroAccess">MacroAccess (class in y360_orglib.disk)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.GroupMember.member_id">member_id (y360_orglib.directory.models.GroupMember attribute)</a>
+      <li><a href="api.html#y360_orglib.disk.BaseAccess.macros">macros (y360_orglib.disk.BaseAccess attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.Group.member_of">member_of (y360_orglib.directory.models.Group attribute)</a>
+      <li><a href="api.html#y360_orglib.audit.MailEvent">MailEvent (class in y360_orglib.audit)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.Group.members">members (y360_orglib.directory.models.Group attribute)</a>
+      <li><a href="api.html#y360_orglib.audit.MailEventsPage">MailEventsPage (class in y360_orglib.audit)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.ShortGroup.members_count">members_count (y360_orglib.directory.models.ShortGroup attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.Contact.main">main (y360_orglib.directory.Contact attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.ShortUser.Name.middle">middle (y360_orglib.directory.models.ShortUser.Name attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.GroupMember.member_id">member_id (y360_orglib.directory.GroupMember attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.Contact.model_config">model_config (y360_orglib.directory.models.Contact attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.Group.member_of">member_of (y360_orglib.directory.Group attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.Group.members">members (y360_orglib.directory.Group attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.ShortGroup.members_count">members_count (y360_orglib.directory.ShortGroup attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.mid">mid (y360_orglib.audit.MailEvent attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.ShortUser.Name.middle">middle (y360_orglib.directory.ShortUser.Name attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.disk.Resource.mime_type">mime_type (y360_orglib.disk.Resource attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.model_config">model_config (y360_orglib.audit.MailEvent attribute)</a>
 
       <ul>
-        <li><a href="api.html#y360_orglib.directory.models.Group.model_config">(y360_orglib.directory.models.Group attribute)</a>
+        <li><a href="api.html#y360_orglib.audit.MailEventsPage.model_config">(y360_orglib.audit.MailEventsPage attribute)</a>
 </li>
-        <li><a href="api.html#y360_orglib.directory.models.GroupMember.model_config">(y360_orglib.directory.models.GroupMember attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.Contact.model_config">(y360_orglib.directory.Contact attribute)</a>
 </li>
-        <li><a href="api.html#y360_orglib.directory.models.GroupMembers2.model_config">(y360_orglib.directory.models.GroupMembers2 attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.Group.model_config">(y360_orglib.directory.Group attribute)</a>
 </li>
-        <li><a href="api.html#y360_orglib.directory.models.GroupsPage.model_config">(y360_orglib.directory.models.GroupsPage attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.GroupMember.model_config">(y360_orglib.directory.GroupMember attribute)</a>
 </li>
-        <li><a href="api.html#y360_orglib.directory.models.ShortGroup.model_config">(y360_orglib.directory.models.ShortGroup attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.GroupMembers2.model_config">(y360_orglib.directory.GroupMembers2 attribute)</a>
 </li>
-        <li><a href="api.html#y360_orglib.directory.models.ShortUser.model_config">(y360_orglib.directory.models.ShortUser attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.GroupsPage.model_config">(y360_orglib.directory.GroupsPage attribute)</a>
 </li>
-        <li><a href="api.html#y360_orglib.directory.models.ShortUser.Name.model_config">(y360_orglib.directory.models.ShortUser.Name attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.ShortGroup.model_config">(y360_orglib.directory.ShortGroup attribute)</a>
 </li>
-        <li><a href="api.html#y360_orglib.directory.models.User.model_config">(y360_orglib.directory.models.User attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.ShortUser.model_config">(y360_orglib.directory.ShortUser attribute)</a>
 </li>
-        <li><a href="api.html#y360_orglib.directory.models.User2fa.model_config">(y360_orglib.directory.models.User2fa attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.ShortUser.Name.model_config">(y360_orglib.directory.ShortUser.Name attribute)</a>
 </li>
-        <li><a href="api.html#y360_orglib.directory.models.UsersPage.model_config">(y360_orglib.directory.models.UsersPage attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.User.model_config">(y360_orglib.directory.User attribute)</a>
 </li>
-        <li><a href="api.html#y360_orglib.service_app.models.ServiceAppTokenResponse.model_config">(y360_orglib.service_app.models.ServiceAppTokenResponse attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.UsersPage.model_config">(y360_orglib.directory.UsersPage attribute)</a>
+</li>
+        <li><a href="api.html#y360_orglib.disk.BaseAccess.model_config">(y360_orglib.disk.BaseAccess attribute)</a>
+</li>
+        <li><a href="api.html#y360_orglib.disk.MacroAccess.model_config">(y360_orglib.disk.MacroAccess attribute)</a>
+</li>
+        <li><a href="api.html#y360_orglib.disk.PublicResourcesList.model_config">(y360_orglib.disk.PublicResourcesList attribute)</a>
+</li>
+        <li><a href="api.html#y360_orglib.disk.PublicSettings.model_config">(y360_orglib.disk.PublicSettings attribute)</a>
+</li>
+        <li><a href="api.html#y360_orglib.disk.Resource.model_config">(y360_orglib.disk.Resource attribute)</a>
+</li>
+        <li><a href="api.html#y360_orglib.disk.UserAccess.model_config">(y360_orglib.disk.UserAccess attribute)</a>
+</li>
+        <li><a href="api.html#y360_orglib.service_app.ServiceAppTokenResponse.model_config">(y360_orglib.service_app.ServiceAppTokenResponse attribute)</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#y360_orglib.disk.Resource.modified">modified (y360_orglib.disk.Resource attribute)</a>
+</li>
       <li>
     module
 
       <ul>
-        <li><a href="api.html#module-y360_orglib.audit.audit_mail">y360_orglib.audit.audit_mail</a>
+        <li><a href="api.html#module-y360_orglib.audit">y360_orglib.audit</a>
 </li>
-        <li><a href="api.html#module-y360_orglib.directory.directory_client">y360_orglib.directory.directory_client</a>
+        <li><a href="api.html#module-y360_orglib.directory">y360_orglib.directory</a>
 </li>
-        <li><a href="api.html#module-y360_orglib.directory.models">y360_orglib.directory.models</a>
+        <li><a href="api.html#module-y360_orglib.disk">y360_orglib.disk</a>
 </li>
-        <li><a href="api.html#module-y360_orglib.disk.disk_client">y360_orglib.disk.disk_client</a>
-</li>
-        <li><a href="api.html#module-y360_orglib.service_app.models">y360_orglib.service_app.models</a>
-</li>
-        <li><a href="api.html#module-y360_orglib.service_app.service_client">y360_orglib.service_app.service_client</a>
+        <li><a href="api.html#module-y360_orglib.service_app">y360_orglib.service_app</a>
 </li>
       </ul></li>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.msg_id">msg_id (y360_orglib.audit.MailEvent attribute)</a>
+</li>
   </ul></td>
 </tr></table>
 
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.ShortGroup.name">name (y360_orglib.directory.models.ShortGroup attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.ShortGroup.name">name (y360_orglib.directory.ShortGroup attribute)</a>
+
+      <ul>
+        <li><a href="api.html#y360_orglib.disk.Resource.name">(y360_orglib.disk.Resource attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#y360_orglib.audit.MailEventsPage.nextPageToken">nextPageToken (y360_orglib.audit.MailEventsPage attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.ShortUser.nickname">nickname (y360_orglib.directory.ShortUser attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#y360_orglib.disk.PublicResourcesList.offset">offset (y360_orglib.disk.PublicResourcesList attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.ShortUser.nickname">nickname (y360_orglib.directory.models.ShortUser attribute)</a>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.org_id">org_id (y360_orglib.audit.MailEvent attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -375,27 +447,39 @@
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.GroupsPage.page">page (y360_orglib.directory.models.GroupsPage attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.GroupsPage.page">page (y360_orglib.directory.GroupsPage attribute)</a>
 
       <ul>
-        <li><a href="api.html#y360_orglib.directory.models.UsersPage.page">(y360_orglib.directory.models.UsersPage attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.UsersPage.page">(y360_orglib.directory.UsersPage attribute)</a>
 </li>
       </ul></li>
-      <li><a href="api.html#y360_orglib.directory.models.GroupsPage.pages">pages (y360_orglib.directory.models.GroupsPage attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.GroupsPage.pages">pages (y360_orglib.directory.GroupsPage attribute)</a>
 
       <ul>
-        <li><a href="api.html#y360_orglib.directory.models.UsersPage.pages">(y360_orglib.directory.models.UsersPage attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.UsersPage.pages">(y360_orglib.directory.UsersPage attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api.html#y360_orglib.disk.Resource.path">path (y360_orglib.disk.Resource attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.GroupsPage.per_page">per_page (y360_orglib.directory.GroupsPage attribute)</a>
+
+      <ul>
+        <li><a href="api.html#y360_orglib.directory.UsersPage.per_page">(y360_orglib.directory.UsersPage attribute)</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.GroupsPage.per_page">per_page (y360_orglib.directory.models.GroupsPage attribute)</a>
-
-      <ul>
-        <li><a href="api.html#y360_orglib.directory.models.UsersPage.per_page">(y360_orglib.directory.models.UsersPage attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.ShortUser.position">position (y360_orglib.directory.ShortUser attribute)</a>
 </li>
-      </ul></li>
-      <li><a href="api.html#y360_orglib.directory.models.ShortUser.position">position (y360_orglib.directory.models.ShortUser attribute)</a>
+      <li><a href="api.html#y360_orglib.disk.PublicSettings.public_accesses">public_accesses (y360_orglib.disk.PublicSettings attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.disk.Resource.public_key">public_key (y360_orglib.disk.Resource attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.disk.Resource.public_url">public_url (y360_orglib.disk.Resource attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.disk.PublicResourcesList">PublicResourcesList (class in y360_orglib.disk)</a>
+</li>
+      <li><a href="api.html#y360_orglib.disk.PublicSettings">PublicSettings (class in y360_orglib.disk)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -403,7 +487,15 @@
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.Group.removed">removed (y360_orglib.directory.models.Group attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.Group.removed">removed (y360_orglib.directory.Group attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.request_id">request_id (y360_orglib.audit.MailEvent attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#y360_orglib.disk.Resource">Resource (class in y360_orglib.disk)</a>
+</li>
+      <li><a href="api.html#y360_orglib.disk.BaseAccess.rights">rights (y360_orglib.disk.BaseAccess attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -411,21 +503,25 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.service_app.models.ServiceAppTokenResponse.scope">scope (y360_orglib.service_app.models.ServiceAppTokenResponse attribute)</a>
+      <li><a href="api.html#y360_orglib.service_app.ServiceAppTokenResponse.scope">scope (y360_orglib.service_app.ServiceAppTokenResponse attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.service_app.service_client.ServiceAppClient">ServiceAppClient (class in y360_orglib.service_app.service_client)</a>
+      <li><a href="api.html#y360_orglib.service_app.ServiceAppClient">ServiceAppClient (class in y360_orglib.service_app)</a>
 </li>
-      <li><a href="api.html#y360_orglib.service_app.models.ServiceAppTokenResponse">ServiceAppTokenResponse (class in y360_orglib.service_app.models)</a>
+      <li><a href="api.html#y360_orglib.service_app.ServiceAppTokenResponse">ServiceAppTokenResponse (class in y360_orglib.service_app)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.ShortGroup">ShortGroup (class in y360_orglib.directory)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.ShortGroup">ShortGroup (class in y360_orglib.directory.models)</a>
+      <li><a href="api.html#y360_orglib.directory.ShortUser">ShortUser (class in y360_orglib.directory)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.ShortUser">ShortUser (class in y360_orglib.directory.models)</a>
+      <li><a href="api.html#y360_orglib.directory.ShortUser.Name">ShortUser.Name (class in y360_orglib.directory)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.ShortUser.Name">ShortUser.Name (class in y360_orglib.directory.models)</a>
+      <li><a href="api.html#y360_orglib.disk.Resource.size">size (y360_orglib.disk.Resource attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.Contact.synthetic">synthetic (y360_orglib.directory.models.Contact attribute)</a>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.source">source (y360_orglib.audit.MailEvent attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.Contact.synthetic">synthetic (y360_orglib.directory.Contact attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -433,22 +529,26 @@
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.User.timezone">timezone (y360_orglib.directory.models.User attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.User.timezone">timezone (y360_orglib.directory.User attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.service_app.models.ServiceAppTokenResponse.token_type">token_type (y360_orglib.service_app.models.ServiceAppTokenResponse attribute)</a>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.to">to (y360_orglib.audit.MailEvent attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.GroupsPage.total">total (y360_orglib.directory.models.GroupsPage attribute)</a>
+      <li><a href="api.html#y360_orglib.service_app.ServiceAppTokenResponse.token_type">token_type (y360_orglib.service_app.ServiceAppTokenResponse attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.GroupsPage.total">total (y360_orglib.directory.GroupsPage attribute)</a>
 
       <ul>
-        <li><a href="api.html#y360_orglib.directory.models.UsersPage.total">(y360_orglib.directory.models.UsersPage attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.UsersPage.total">(y360_orglib.directory.UsersPage attribute)</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.Group.type">type (y360_orglib.directory.models.Group attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.Group.type">type (y360_orglib.directory.Group attribute)</a>
 
       <ul>
-        <li><a href="api.html#y360_orglib.directory.models.GroupMember.type">(y360_orglib.directory.models.GroupMember attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.GroupMember.type">(y360_orglib.directory.GroupMember attribute)</a>
+</li>
+        <li><a href="api.html#y360_orglib.disk.Resource.type">(y360_orglib.disk.Resource attribute)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -457,25 +557,31 @@
 <h2 id="U">U</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.ShortUser.uid">uid (y360_orglib.directory.models.ShortUser attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.ShortUser.uid">uid (y360_orglib.directory.ShortUser attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.User.updated_at">updated_at (y360_orglib.directory.models.User attribute)</a>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.uniq_id">uniq_id (y360_orglib.audit.MailEvent attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.User">User (class in y360_orglib.directory.models)</a>
+      <li><a href="api.html#y360_orglib.directory.User.updated_at">updated_at (y360_orglib.directory.User attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.User2fa">User2fa (class in y360_orglib.directory.models)</a>
+      <li><a href="api.html#y360_orglib.directory.User">User (class in y360_orglib.directory)</a>
+</li>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.user_login">user_login (y360_orglib.audit.MailEvent attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.User2fa.user_id">user_id (y360_orglib.directory.models.User2fa attribute)</a>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.user_name">user_name (y360_orglib.audit.MailEvent attribute)</a>
 </li>
-      <li><a href="api.html#y360_orglib.directory.models.GroupMembers2.users">users (y360_orglib.directory.models.GroupMembers2 attribute)</a>
+      <li><a href="api.html#y360_orglib.audit.MailEvent.user_uid">user_uid (y360_orglib.audit.MailEvent attribute)</a>
+</li>
+      <li><a href="api.html#y360_orglib.disk.UserAccess">UserAccess (class in y360_orglib.disk)</a>
+</li>
+      <li><a href="api.html#y360_orglib.directory.GroupMembers2.users">users (y360_orglib.directory.GroupMembers2 attribute)</a>
 
       <ul>
-        <li><a href="api.html#y360_orglib.directory.models.UsersPage.users">(y360_orglib.directory.models.UsersPage attribute)</a>
+        <li><a href="api.html#y360_orglib.directory.UsersPage.users">(y360_orglib.directory.UsersPage attribute)</a>
 </li>
       </ul></li>
-      <li><a href="api.html#y360_orglib.directory.models.UsersPage">UsersPage (class in y360_orglib.directory.models)</a>
+      <li><a href="api.html#y360_orglib.directory.UsersPage">UsersPage (class in y360_orglib.directory)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -483,7 +589,7 @@
 <h2 id="V">V</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#y360_orglib.directory.models.Contact.value">value (y360_orglib.directory.models.Contact attribute)</a>
+      <li><a href="api.html#y360_orglib.directory.Contact.value">value (y360_orglib.directory.Contact attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -492,47 +598,33 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li>
-    y360_orglib.audit.audit_mail
+    y360_orglib.audit
 
       <ul>
-        <li><a href="api.html#module-y360_orglib.audit.audit_mail">module</a>
+        <li><a href="api.html#module-y360_orglib.audit">module</a>
 </li>
       </ul></li>
       <li>
-    y360_orglib.directory.directory_client
+    y360_orglib.directory
 
       <ul>
-        <li><a href="api.html#module-y360_orglib.directory.directory_client">module</a>
-</li>
-      </ul></li>
-      <li>
-    y360_orglib.directory.models
-
-      <ul>
-        <li><a href="api.html#module-y360_orglib.directory.models">module</a>
+        <li><a href="api.html#module-y360_orglib.directory">module</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li>
-    y360_orglib.disk.disk_client
+    y360_orglib.disk
 
       <ul>
-        <li><a href="api.html#module-y360_orglib.disk.disk_client">module</a>
+        <li><a href="api.html#module-y360_orglib.disk">module</a>
 </li>
       </ul></li>
       <li>
-    y360_orglib.service_app.models
+    y360_orglib.service_app
 
       <ul>
-        <li><a href="api.html#module-y360_orglib.service_app.models">module</a>
-</li>
-      </ul></li>
-      <li>
-    y360_orglib.service_app.service_client
-
-      <ul>
-        <li><a href="api.html#module-y360_orglib.service_app.service_client">module</a>
+        <li><a href="api.html#module-y360_orglib.service_app">module</a>
 </li>
       </ul></li>
   </ul></td>

@@ -12,12 +12,17 @@ from y360_orglib.logging.config import configure_logger
 class DiskClient():
     """
     Yandex Disk client
+    
+    Args:
+        token: Disk User's token
+        ssl_verify: Verify SSL certificate
+        log_level: Log level
     """
     def __init__(self, token: str, ssl_verify=True, log_level=logging.INFO):
         """
         Initialize Yandex Disk client
         Args:
-            token: Yandex Disk User's token
+            token: Disk User's token
             ssl_verify: Verify SSL certificate
             log_level: Log level
         """

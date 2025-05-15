@@ -8,10 +8,29 @@ from y360_orglib.logging.config import configure_logger
 
 
 class AuditMail():
+    """
+    Mail Audit API client.
+
+    Args:
+        api_key (str): The API key.
+        org_id (str): The organization ID.
+        ssl_verify (bool, optional): Whether to verify SSL certificates. Defaults to True.
+        log_level (int, optional): The logging level. Defaults to logging.INFO.
+    """
+
     __url = 'https://api360.yandex.net/security/v1/org/'
-    __per_page = 100
     
     def __init__(self, api_key: str, org_id: str, ssl_verify=True, log_level=logging.INFO):
+        """
+        Initialize the Mail Audit API client.
+
+        Args:
+            api_key (str): The API key.
+            org_id (str): The organization ID.
+            ssl_verify (bool, optional): Whether to verify SSL certificates. Defaults to True.
+            log_level (int, optional): The logging level. Defaults to logging.INFO.
+        """
+
         self._api_key = api_key
         self._org_id = org_id
         self.log = configure_logger(logger_name=__name__, level=log_level)
@@ -34,8 +53,10 @@ class AuditMail():
 
         Returns:
             MailEventsPage: The page of MailEvent events.
+
+        Raises:
+            MailAuditError: If there is an error getting the events page.
         """
-        
 
         if len(page_token) == 0:
             page_token = f'{page * per_page - per_page}'

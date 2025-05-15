@@ -9,11 +9,31 @@ from y360_orglib.logging.config import configure_logger
 
 
 class DirectoryClient():
+    """
+    Directory API Client
+    
+    Args:
+        api_key (str): API key
+        org_id (str): Organization ID
+        ssl_verify (bool, optional): Verify SSL certificate. Defaults to True.
+        log_level (int, optional): Log level. Defaults to logging.INFO.
+    """
+
     __url = 'https://api360.yandex.net/directory/v1/org/'
     __url_v2 = 'https://api360.yandex.net/directory/v2/org/'
     __per_page = 100
     
     def __init__(self, api_key: str, org_id: str, ssl_verify=True, log_level=logging.INFO):
+        """Initialize the Directory Client
+        
+        Args:
+            api_key (str): API key
+            org_id (str): Organization ID
+            ssl_verify (bool, optional): Verify SSL certificate. Defaults to True.
+            log_level (int, optional): Log level. Defaults to logging.INFO.
+
+        """
+
         self._api_key = api_key
         self._org_id = org_id
         self.log = configure_logger(logger_name=__name__, level=log_level)
@@ -24,15 +44,16 @@ class DirectoryClient():
         }
         self.session.headers.update(self._headers)
 
-    
-    def close(self):
-        self.session.close()
 
     def count_pages(self)-> Tuple[int, int]:
-        """Get number of pages in users list response
+        """
+        Get number of pages in users list response
 
         Returns:
             Tuple[int, int]: (users_count, pages_count)
+        
+        Raises:
+            DirectoryClientError: If error occurs
         """
 
         path = f'{self.__url}{self._org_id}/users?perPage={self.__per_page}'
@@ -48,7 +69,8 @@ class DirectoryClient():
         
     
     def get_users_page(self, page) -> UsersPage:
-        """Get a Users page with list of users (default 100 per page)
+        """
+        Get a Users page with list of users (default 100 per page)
 
         Args:
             page (int): Page number
@@ -56,7 +78,6 @@ class DirectoryClient():
             UsersPage: Users page object
         Raises:
             DirectoryClientError: If error occurs
-
         """
 
         path = f'{self.__url}{self._org_id}/users?page={page}&perPage={self.__per_page}'
@@ -75,7 +96,6 @@ class DirectoryClient():
 
         Returns:
             List[User]: List of User objects
-       
         """
         
         users = []
@@ -117,7 +137,9 @@ class DirectoryClient():
         
         
     def add_user_to_group(self, user_id: str, group_id: int) -> dict:
-        """Add user to group. Use API v1 method: dev/api360/doc/ru/ref/GroupService/GroupService_AddMember
+        """
+        Add user to a group
+        Use API v1 method: https://yandex.ru/dev/api360/doc/ru/ref/GroupService/GroupService_AddMember
 
         Args:
             user_id (str): User ID
@@ -141,7 +163,9 @@ class DirectoryClient():
         
 
     def get_groups_page(self, page: int = 1, per_page: int = 10) -> GroupsPage:
-        """Get groups of an organization. Use API v1 method: https://yandex.ru/dev/api360/doc/ru/ref/GroupService/GroupService_List
+        """
+        Get groups of an organization
+        Use API v1 method: https://yandex.ru/dev/api360/doc/ru/ref/GroupService/GroupService_List
 
         Args:
             page (int, optional): Page number. Defaults to 1.
@@ -162,7 +186,9 @@ class DirectoryClient():
     
 
     def get_group_members_v2(self, group_id) -> GroupMembers2:
-        """Get members of a group. Use API v2 method: https://yandex.ru/dev/api360/doc/ru/ref/GroupV2Service/GroupService_ListMembers
+        """
+        Get members of a group
+        Use API v2 method: https://yandex.ru/dev/api360/doc/ru/ref/GroupV2Service/GroupService_ListMembers
 
         Args:
             group_id (number): Group ID number. Use get_groups(page, per_page) to get IDs
@@ -181,7 +207,9 @@ class DirectoryClient():
             raise DirectoryClientError(e)
         
     def get_user_2fa(self, user_id: str) -> User2fa:
-        """Get 2fa status of a user. Use API v2 method: https://yandex.ru/dev/api360/doc/ru/ref/UserService/UserService_Get2fa
+        """
+        Get 2fa status of a user
+        Use API v2 method: https://yandex.ru/dev/api360/doc/ru/ref/UserService/UserService_Get2fa
 
         Args:
             user_id (str): User ID
@@ -199,4 +227,9 @@ class DirectoryClient():
             self.log.error(f"Error getting user 2fa: {e}")
             raise DirectoryClientError(e)
            
+    def close(self):
+        """
+        Close client session
+        """
 
+        self.session.close()

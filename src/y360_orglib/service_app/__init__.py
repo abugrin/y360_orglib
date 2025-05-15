@@ -1,5 +1,5 @@
 """
-ServiceApps module for interacting with the Y360 Service Applications.
+ServiceApps module for interacting with the Y360 Service Applications API.
 """
 
 __version__ = "0.1.0"

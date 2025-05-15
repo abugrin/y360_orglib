@@ -10,6 +10,11 @@ from y360_orglib.service_app.models import ServiceAppTokenResponse
 class ServiceAppClient:
     """
     Service App Client
+
+    Args:
+        client_id: Service App Client ID
+        client_secret: Service App Client Secret
+        ssl_verify: Verify SSL certificate
     """
 
     def __init__(self, client_id, client_secret, ssl_verify=True):

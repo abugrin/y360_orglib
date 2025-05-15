@@ -1,41 +1,27 @@
-Package y360\_orglib
+Y360 Orglib
 ====================
 Tools collection to work with Y360 API
 
 Mail Audit Log API Client
 -------------------------
 
-.. automodule:: y360_orglib.audit.audit_mail
+.. automodule:: y360_orglib.audit
    :members:
-   :undoc-members:
-   :show-inheritance:
 
 Directory API Client
 --------------------
 
-.. automodule:: y360_orglib.directory.directory_client
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-.. automodule:: y360_orglib.directory.models
+.. automodule:: y360_orglib.directory
    :members:
 
 Disk API Client
 ---------------
 
-.. automodule:: y360_orglib.disk.disk_client
+.. automodule:: y360_orglib.disk
    :members:
-   :undoc-members:
-   :show-inheritance:
 
 Service Applications Client
 ---------------------------
 
-.. automodule:: y360_orglib.service_app.service_client
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-.. automodule:: y360_orglib.service_app.models
+.. automodule:: y360_orglib.service_app
    :members:

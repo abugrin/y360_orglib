@@ -1,7 +1,8 @@
 from pydantic import BaseModel
 
 class ServiceAppTokenResponse(BaseModel):
-    """Response from the service app token endpoint
+    """
+    Response from the service app token endpoint
     Details https://yandex.ru/support/yandex-360/business/admin/ru/security-service-applications
 
     Attributes:
