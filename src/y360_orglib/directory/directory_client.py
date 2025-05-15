@@ -30,8 +30,8 @@ class DirectoryClient():
 
     def count_pages(self)-> Tuple[int, int]:
         """Get number of pages in users list response
-            Returns:
-                Tuple[int, int]: (users_count, pages_count)
+        Returns:
+            Tuple[int, int]: (users_count, pages_count)
         """
 
         path = f'{self.__url}{self._org_id}/users?perPage={self.__per_page}'

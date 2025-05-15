@@ -1,9 +1,10 @@
 Package y360\_orglib
 =====
-
+Tools collection to work with Y360 API
 
 Mail Audit y360\_orglib.audit
 ---------------
+Mail Audit Log API Client
 
 .. automodule:: y360_orglib.audit.audit_mail
    :members:
@@ -12,6 +13,7 @@ Mail Audit y360\_orglib.audit
 
 Directory y360\_orglib.directory
 ---------------
+Directory API Client
 
 .. automodule:: y360_orglib.directory.directory_client
    :members:
@@ -20,6 +22,7 @@ Directory y360\_orglib.directory
 
 Disk y360\_orglib.disk
 ---------------
+Disk API Client
 
 .. automodule:: y360_orglib.disk.disk_client
    :members:
@@ -28,6 +31,7 @@ Disk y360\_orglib.disk
 
 Service Apps y360\_orglib.service\_app
 ---------------
+Service Applications Client
 
 .. automodule:: y360_orglib.service_app.service_client
    :members:
