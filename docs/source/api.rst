@@ -2,7 +2,7 @@ Y360 Orglib
 ====================
 Tools collection to work with Y360 API
 
-Mail Audit Log API Client
+Audit Log API Clients
 -------------------------
 
 .. automodule:: y360_orglib.audit
