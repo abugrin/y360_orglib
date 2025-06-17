@@ -59,6 +59,13 @@ def make_request(
                 retries += 1
                 continue
 
+            if response.status_code == 500:
+                retry_after = int(response.headers.get('Retry-After', retry_delay))
+                logger.error(f"Internal Server error {retry_after} seconds")
+                time.sleep(retry_after)
+                retries += 1
+                continue
+
             if response.status_code == 400:
                 raise BadRequestError(f"Request failed: {response.text}")
                 

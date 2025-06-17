@@ -33,3 +33,7 @@ class DiskClientError(APIError):
 class MailAuditError(APIError):
     """Mail Audit Log exception"""
     pass
+
+class EventAuditError(APIError):
+    """Event Audit Log exception"""
+    pass

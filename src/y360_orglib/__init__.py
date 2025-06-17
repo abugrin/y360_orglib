@@ -11,6 +11,7 @@ from y360_orglib.common.exceptions import ServiceAppError, DirectoryClientError,
 from y360_orglib.directory.directory_client import DirectoryClient
 from y360_orglib.disk.disk_client import DiskClient
 from y360_orglib.audit.audit_mail import AuditMail
+from y360_orglib.audit.event_models import AuditLogEventsPage, AuditLogEvent, EnrichedEvent, TelemostConference
 
 
 __all__ = [
@@ -22,5 +23,9 @@ __all__ = [
     'MailAuditError',
     'DiskClient',
     'AuditMail',
+    'AuditLogEventsPage',
+    'AuditLogEvent',
+    'EnrichedEvent',
+    'TelemostConference',
     'configure_logger'
     ]

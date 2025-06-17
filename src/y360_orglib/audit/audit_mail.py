@@ -65,7 +65,7 @@ class AuditMail():
         path = f'{self.__url}{self._org_id}/audit_log/mail?pageSize={per_page}&pageToken={page_token}'
 
         try:
-            response_json = response_json = make_request(session=self.session, url=path, method='GET')
+            response_json = make_request(session=self.session, url=path, method='GET')
             return MailEventsPage(**response_json)
         except APIError as e:
             self.log.error(f"Error getting events page: {e}")
