@@ -44,6 +44,42 @@ class PublicResourcesList(BaseModel):
     limit: int
     offset: int
 
+class ResourceShort(BaseModel):
+    """
+    Short Resource model
+    Details https://yandex.ru/dev/disk-api/doc/ru/reference/response-objects#resourceshort
+
+    Attributes:
+        public_hash (str): Published resource key. Only if resource is published
+        created_at (str): Resource creation date in ISO 8601 format
+        modified_at (str): Resource modify date in ISO 8601 format
+        name (str): Resource name (filename or folder name) 
+        path (str): Full resource path on Disk
+        type (str): Resource type (dir, file)
+
+    """
+    public_hash: Optional[str]
+    created_at: str
+    modified_at: str
+    name: str
+    path: str
+    type: Literal['file', 'dir']
+
+class ResourceListShort(BaseModel):
+    """
+    Short Resource List model
+    Details https://yandex.ru/dev/disk-api/doc/ru/reference/response-objects#resourceshort
+
+    Attributes:
+        items (List[Resource]): List of resources
+        limit (int): Limit of resources
+        offset (int): Offset of resources
+    """
+
+    items: List[ResourceShort]
+    limit: int
+    offset: int
+
 
 class BaseAccess(BaseModel):
     """
@@ -85,7 +121,7 @@ class UserAccess(BaseAccess):
 
     """
 
-    access_type: Literal['user', 'group', 'department'] = Field(alias='type')
+    access_type: Literal['user', 'group', 'department', 'owner'] = Field(alias='type')
     org_id: Optional[int] = None
     user_id: int = Field(alias='id')
 

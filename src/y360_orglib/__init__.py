@@ -10,6 +10,7 @@ from y360_orglib.service_app import ServiceAppClient
 from y360_orglib.common.exceptions import ServiceAppError, DirectoryClientError, DiskClientError, MailAuditError
 from y360_orglib.directory.directory_client import DirectoryClient
 from y360_orglib.disk.disk_client import DiskClient
+from y360_orglib.disk.disk_admin import DiskAdminClient
 from y360_orglib.audit.audit_mail import AuditMail
 from y360_orglib.audit.event_models import AuditLogEventsPage, AuditLogEvent, EnrichedEvent, TelemostConference
 
@@ -27,5 +28,6 @@ __all__ = [
     'AuditLogEvent',
     'EnrichedEvent',
     'TelemostConference',
+    'DiskAdminClient',
     'configure_logger'
     ]

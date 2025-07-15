@@ -2,10 +2,10 @@ import time
 import httpx
 from typing import Any, Dict, Optional
 from httpx import RequestError
-from y360_orglib.common.exceptions import AuthenticationError, BadRequestError
+from y360_orglib.common.exceptions import AuthenticationError, BadRequestError, ConnectionError
 from y360_orglib import configure_logger
 
-logger = configure_logger(logger_name = __name__, console=True)
+logger = configure_logger(logger_name = __name__)
 
 def make_request(
     session: httpx.Client,
@@ -61,7 +61,7 @@ def make_request(
 
             if response.status_code == 500:
                 retry_after = int(response.headers.get('Retry-After', retry_delay))
-                logger.error(f"Internal Server error {retry_after} seconds")
+                logger.error(f"Internal Server error. Retrying after {retry_after} seconds")
                 time.sleep(retry_after)
                 retries += 1
                 continue
@@ -78,6 +78,7 @@ def make_request(
             
             # Return the JSON response
             return response.json()
+        
             
         except RequestError as e:
             if retries < max_retries:
@@ -85,5 +86,9 @@ def make_request(
                 time.sleep(retry_delay)
                 retries += 1
             else:
+                logger.error(f"Request failed after {max_retries} retries: {str(e)}")
+                raise ConnectionError(f"Connection error: {str(e)}") from e
+            
+        except httpx.HTTPStatusError as e:
                 logger.error(f"Request failed after {max_retries} retries: {str(e)}")
                 raise ConnectionError(f"Connection error: {str(e)}") from e
