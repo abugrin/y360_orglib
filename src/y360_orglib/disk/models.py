@@ -136,7 +136,7 @@ class PublicSettings(BaseModel):
         public_accesses (List[Union[MacroAccess, UserAccess]]): List of public accesses
     """
 
-    available_until: Optional[str]
+    available_until: Optional[Union[str, int]]
     public_accesses: List[Union[MacroAccess, UserAccess]] = Field(alias='accesses')
     
 
