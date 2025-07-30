@@ -5,7 +5,7 @@ with open("readme.md", "r") as fh:
 
 setup(
     name="y360-orglib",
-    version="0.0.10",
+    version="0.0.11",
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     author="Anton Bugrin",
