@@ -21,7 +21,7 @@ class DirectoryClient():
 
     __url = 'https://api360.yandex.net/directory/v1/org/'
     __url_v2 = 'https://api360.yandex.net/directory/v2/org/'
-    __per_page = 100
+    __per_page = 1000
     
     def __init__(self, api_key: str, org_id: str, ssl_verify=True, log_level=logging.INFO):
         """Initialize the Directory Client
