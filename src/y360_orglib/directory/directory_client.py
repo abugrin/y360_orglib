@@ -162,7 +162,7 @@ class DirectoryClient():
             raise DirectoryClientError(e)
         
 
-    def get_groups_page(self, page: int = 1, per_page: int = 10) -> GroupsPage:
+    def get_groups_page(self, page: int = 1, per_page: int = 100) -> GroupsPage:
         """
         Get groups of an organization
         Use API v1 method: https://yandex.ru/dev/api360/doc/ru/ref/GroupService/GroupService_List

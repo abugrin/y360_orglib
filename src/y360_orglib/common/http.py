@@ -6,7 +6,7 @@ from httpx import RequestError
 from y360_orglib.common.exceptions import AuthenticationError, BadRequestError, ConnectionError
 from y360_orglib import configure_logger
 
-logger = configure_logger(logger_name = __name__, level=logging.DEBUG)
+logger = configure_logger(logger_name = __name__, level=logging.DEBUG, console=False)
 
 
 def make_request(
