@@ -1,5 +1,5 @@
 
-from typing import List, Literal
+from typing import List, Literal, Optional
 from pydantic import BaseModel, Field
 
 
@@ -81,6 +81,7 @@ class User(ShortUser):
         aliases (List[str]): User aliases
     """
     is_enabled: bool = Field(alias="isEnabled")
+    is_enabled_updated_at: Optional[str] = Field(default=None, alias="isEnabledUpdatedAt")
     about: str
     birthday: str
     external_id: str = Field(alias="externalId")

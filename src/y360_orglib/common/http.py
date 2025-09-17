@@ -1,3 +1,4 @@
+import logging
 import time
 import httpx
 from typing import Any, Dict, Optional
@@ -5,7 +6,8 @@ from httpx import RequestError
 from y360_orglib.common.exceptions import AuthenticationError, BadRequestError, ConnectionError
 from y360_orglib import configure_logger
 
-logger = configure_logger(logger_name = __name__)
+logger = configure_logger(logger_name = __name__, level=logging.DEBUG)
+
 
 def make_request(
     session: httpx.Client,
@@ -42,6 +44,7 @@ def make_request(
     retries = 0
     while retries <= max_retries:
         try:
+            logger.debug(f"{method} {url} {params}")
             response = session.request(
                 method=method,
                 url=url,
